@@ -1,4 +1,4 @@
-# This page contains the material used in "Getting up-to-speed with Python" workshop
+# Getting up-to-speed with Python: Workshop Materials
 
 ## Package and environment management with pip and venv
 
