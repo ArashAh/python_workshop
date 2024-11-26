@@ -130,51 +130,40 @@ The following command creates an isolated Python environment in the "my_venv" di
 7. **Recreate your environment somewhere else:**
 
     <table>
-      <tr>
-        <td>
-          <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
-        </td>
-        <td>
-          <pre>
-          <code>
-    python -m venv new_venv
-    .\new_venv\Scripts\activate
-    pip install -r requirements.txt
-          </code>
-          </pre>
-        </td>
-      </tr>
-    </table>
-       
-    <table>
-      <tr>
-        <td>
-          <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
-          <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
-        </td>
-        <td>
-          <pre>
-          <code>
-    python3 -m venv new_venv
-    source new_venv/bin/activate
-    pip install -r requirements.txt
-          </code>
-          </pre>
-        </td>
-      </tr>
-    </table>
-
-
+  <tr>
+    <td>
+      <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
+      <pre>
+      <code>
+python -m venv new_venv
+.\new_venv\Scripts\activate
+pip install -r requirements.txt
+      </code>
+      </pre>
+    </td>
+    <td>
+      <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
+      <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
+      <pre>
+      <code>
+python3 -m venv new_venv
+source new_venv/bin/activate
+pip install -r requirements.txt
+      </code>
+      </pre>
+    </td>
+  </tr>
+</table>
    
 ### 4. Cleanup
 
-1. **Deactivate your environment:**
+- **Deactivate your environment:**
 
    ```bash
    deactivate 
    ```
 
-2. **Delete your environment: (if needed)** 
+- **Delete your environment: (if needed)** 
 
 <table>
   <tr>
