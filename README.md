@@ -36,17 +36,55 @@ $ python3 --version
 
 
 1. **Create a new directory for the project:**
-
-   ```bash
-   mkdir my_project
-   cd my_project
-   ```
+   
+    <table>
+      <tr>
+        <td>
+          <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
+          <pre>
+          <code>
+    md my_project
+    cd my_project
+          </code>
+          </pre>
+        </td>
+        <td>
+          <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
+          <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
+          <pre>
+          <code>
+    mkdir my_project
+    cd my_project
+          </code>
+          </pre>
+        </td>
+      </tr>
+    </table>
 
 2. **Create a virtual environment:**
 The following command creates an isolated Python environment in the "my_venv" directory.
-   ```bash
-   python3 -m venv my_venv
-    ```
+
+    <table>
+      <tr>
+        <td>
+          <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
+          <pre>
+          <code>
+    python -m venv my_venv
+          </code>
+          </pre>
+        </td>
+        <td>
+          <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
+          <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
+          <pre>
+          <code>
+    python3 -m venv my_venv
+          </code>
+          </pre>
+        </td>
+      </tr>
+    </table>
 
 3. **Activate the virtual environment:**
 
@@ -75,7 +113,7 @@ The following command creates an isolated Python environment in the "my_venv" di
 ### 3. Installing and Using Packages
 1. **Installing a package inside your environment:**
    ```bash
-   pip install scipy
+   pip install numpy
     ```
 2. **Verify the installation:**
    ```bash
