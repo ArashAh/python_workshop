@@ -50,27 +50,27 @@ The following command creates an isolated Python environment in the "my_venv" di
 
 3. **Activate the virtual environment:**
 
-<table>
-  <tr>
-    <td>
-      <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
-      <pre>
-      <code>
-.\my_venv\Scripts\activate
-      </code>
-      </pre>
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
-      <pre>
-      <code>
-source my_venv/bin/activate
-      </code>
-      </pre>
-    </td>
-  </tr>
-</table>
+    <table>
+      <tr>
+        <td>
+          <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
+          <pre>
+          <code>
+    .\my_venv\Scripts\activate
+          </code>
+          </pre>
+        </td>
+        <td>
+          <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
+          <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
+          <pre>
+          <code>
+    source my_venv/bin/activate
+          </code>
+          </pre>
+        </td>
+      </tr>
+    </table>
    
 ### 3. Installing and Using Packages
 1. **Installing a package inside your environment:**
@@ -95,27 +95,27 @@ source my_venv/bin/activate
    
 4. **Reactivate your virtual environment:**
 
-<table>
-  <tr>
-    <td>
-      <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
-      <pre>
-      <code>
-.\my_venv\Scripts\activate
-      </code>
-      </pre>
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
-      <pre>
-      <code>
-source my_venv/bin/activate
-      </code>
-      </pre>
-    </td>
-  </tr>
-</table>
+    <table>
+      <tr>
+        <td>
+          <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
+          <pre>
+          <code>
+    .\my_venv\Scripts\activate
+          </code>
+          </pre>
+        </td>
+        <td>
+          <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
+          <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
+          <pre>
+          <code>
+    source my_venv/bin/activate
+          </code>
+          </pre>
+        </td>
+      </tr>
+    </table>
 
    
 5. **Upgrading pip inside the environment:**
@@ -129,57 +129,74 @@ source my_venv/bin/activate
    
 7. **Recreate your environment somewhere else:**
 
-<table>
-  <tr>
-    <td>
-      <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
-    </td>
-    <td>
-      <pre>
-      <code>
-python -m venv new_venv
-.\new_venv\Scripts\activate
-pip install -r requirements.txt
-      </code>
-      </pre>
-    </td>
-  </tr>
-</table>
-   
-<table>
-  <tr>
-    <td>
-      <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
-    </td>
-    <td>
-      <pre>
-      <code>
-python3 -m venv new_venv
-source new_venv/bin/activate
-pip install -r requirements.txt
-      </code>
-      </pre>
-    </td>
-  </tr>
-</table>
+    <table>
+      <tr>
+        <td>
+          <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
+        </td>
+        <td>
+          <pre>
+          <code>
+    python -m venv new_venv
+    .\new_venv\Scripts\activate
+    pip install -r requirements.txt
+          </code>
+          </pre>
+        </td>
+      </tr>
+    </table>
+       
+    <table>
+      <tr>
+        <td>
+          <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
+          <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
+        </td>
+        <td>
+          <pre>
+          <code>
+    python3 -m venv new_venv
+    source new_venv/bin/activate
+    pip install -r requirements.txt
+          </code>
+          </pre>
+        </td>
+      </tr>
+    </table>
 
 
    
 ### 4. Cleanup
-Deactivate your environment
+
+1. **Deactivate your environment:**
 
    ```bash
    deactivate 
    ```
 
-Delete your environment 
+2. **Delete your environment: (if needed)** 
 
-| ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) | ```rmdir /s /q new_venv ``` |
-|---------------------------------------------------------------------------------------------------------|-----------------------------|
-
-| ![macOS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)  | ```rm -rf new_venv ``` |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+<table>
+  <tr>
+    <td>
+      <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
+      <pre>
+      <code>
+rmdir /s /q new_venv
+      </code>
+      </pre>
+    </td>
+    <td>
+      <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
+      <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
+      <pre>
+      <code>
+rm -rf new_venv
+      </code>
+      </pre>
+    </td>
+  </tr>
+</table>
 
 
 ## Package and envirnoment management with conda 
