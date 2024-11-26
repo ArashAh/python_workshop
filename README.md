@@ -1,6 +1,12 @@
 # Getting up-to-speed with Python: Workshop Materials
 
-## Package and environment management with pip and venv
+- [Package and environment management with pip and venv](#environment)
+- [Package and environment management with conda](#conda)
+- [Package and environment management with poetry](#poetry)
+- [VS Code](#vscode)
+- [Production tools - HPC servers](#hpc)
+- ---
+## Package and environment management with pip and venv <a name="environment"></a>
 
 ### Objectives
 - Understand the purpose of virtual environments.
@@ -226,10 +232,10 @@ rm -rf new_venv
 </table>
 
 
-## Package and envirnoment management with conda 
+## Package and environment management with conda <a name="conda"></a>
 
-## Package and environment management with poetry 
+## Package and environment management with poetry <a name="poetry"></a>
 
-## VS Code
+## VS Code <a name="vscode"></a>
 
-## Production tools - HPC servers
+## Production tools - HPC servers <a name="hpc"></a>
