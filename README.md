@@ -5,7 +5,9 @@
 - [Package and environment management with poetry](#poetry)
 - [VS Code](#vscode)
 - [Production tools - HPC servers](#hpc)
-- ---
+
+----
+
 ## Package and environment management with pip and venv <a name="environment"></a>
 
 ### Objectives
