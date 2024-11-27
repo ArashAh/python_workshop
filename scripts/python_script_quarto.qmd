@@ -1,0 +1,89 @@
+---
+title: "python_script_quarto"
+format: html
+editor: visual
+---
+
+# Demo running Python in Quarto
+
+In this document, we explore application of Quarto for running Python scripts.
+
+## Test connection with the Python interpreter
+
+```{python }
+print("Hello from Python")
+```
+
+## Import packages
+
+```{python }
+import numpy as np
+import matplotlib.pyplot as plt
+
+```
+
+## Generate data and perform calculations
+
+```{python }
+random_numbers = np.random.rand(100)
+mean_value = np.mean(random_numbers)
+
+print("Random numbers:", random_numbers)
+print("Mean value:", mean_value)
+
+```
+
+## Generate plots
+
+```{python }
+# Create a plot
+plt.figure(figsize=(10, 6))
+plt.plot(random_numbers, marker='o', linestyle='-', color='b', label='Random Numbers')
+plt.axhline(y=mean_value, color='r', linestyle='--', label=f'Mean Value: {mean_value:.2f}')
+plt.title('Plot of 100 Random Numbers')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.legend()
+plt.grid(True)
+
+
+# Display the plot
+plt.show()
+
+```
+
+# Quarto Formatting Examples
+
+## Headings
+
+You can create different levels of headings:
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+## Text Formatting
+
+You can use **bold** or *italic* text to emphasize important information. You can also include ~~strikethrough~~ text.
+
+## Lists
+
+### Ordered List
+
+1.  First item
+2.  Second item
+    1.  Sub-item
+    2.  Sub-item
+3.  Third item
+
+### Unordered List
+
+-   Item one
+-   Item two
+    -   Sub-item
+    -   Sub-item
+-   Item three
