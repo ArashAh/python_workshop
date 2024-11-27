@@ -240,6 +240,28 @@ rm -rf new_venv
 
 ## Package and environment management with conda <a name="conda"></a>
 
+These are the options for Conda installation (Anaconda is not required for the workshop) [https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
+
+Removing the defaults channel, and (just in case) adding the conda-forge channel:
+````
+conda config --remove channels defaults
+conda config --add channels conda-forge
+`````
+
+Example Conda session. Pip is used inside a Conda environment:
+```
+conda create --name my-own-test-env python=3.11 
+conda activate my-own-test-env 
+conda install pandas
+where pip
+conda install pip
+pip install scikit-learn
+conda list
+conda env export --from-history
+conda deactivate
+```
+
+
 ## Package and environment management with poetry <a name="poetry"></a>
 
 Poetry requires python 3.8 or higher. For the final demonstration of this part of the workshop, python 3.10 (or higher) is required (optional).
