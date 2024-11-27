@@ -242,6 +242,41 @@ rm -rf new_venv
 
 ## Package and environment management with poetry <a name="poetry"></a>
 
+Poetry requires python 3.8 or higher. For the final demonstration of this part of the workshop, python 3.10 (or higher) is required (optional).
+
+Once you have the right python version, it is recommended to install poetry using `pipx`.
+
+See [here](https://pipx.pypa.io/stable/installation/) on how to install `pipx`.
+
+Once `pipx` is installed, see [here](https://python-poetry.org/docs/#installing-with-pipx) on how to use it to install `poetry`
+
 ## VS Code <a name="vscode"></a>
+
+### Extensions
+
+- [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+- [Juptyer](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+- [Black formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) (optional)
+- [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) (optional)
+- [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) (optional)
+
+### Python interactive window
+
+You need a VS Code version from 2024.
+
+See [here](https://code.visualstudio.com/docs/python/jupyter-support-py) for full details
+
+How to install required libraries for this setup (ideally in an virtual environment):
+```bash
+pip install jupyter
+pip install ipykernel
+```
+
+Additional to convert a python file (.py) to jupyter notebook (.ipynb)
+```bash
+pip install nbconvert
+```
+
+You also need the jupyter extension (see above)
 
 ## Production tools - HPC servers <a name="hpc"></a>
