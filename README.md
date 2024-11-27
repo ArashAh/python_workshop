@@ -260,4 +260,23 @@ Once `pipx` is installed, see [here](https://python-poetry.org/docs/#installing-
 - [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) (optional)
 - [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) (optional)
 
+### Python interactive window
+
+You need a VS Code version from 2024.
+
+See [here](https://code.visualstudio.com/docs/python/jupyter-support-py) for full details
+
+How to install required libraries for this setup (ideally in an virtual environment):
+```bash
+pip install jupyter
+pip install ipykernel
+```
+
+Additional to convert a python file (.py) to jupyter notebook (.ipynb)
+```bash
+pip install nbconvert
+```
+
+You also need the jupyter extension (see above)
+
 ## Production tools - HPC servers <a name="hpc"></a>
