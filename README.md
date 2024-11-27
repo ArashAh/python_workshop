@@ -244,4 +244,12 @@ rm -rf new_venv
 
 ## VS Code <a name="vscode"></a>
 
+### Extensions
+
+- [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+- [Juptyer](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+- [Black formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) (optional)
+- [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) (optional)
+- [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) (optional)
+
 ## Production tools - HPC servers <a name="hpc"></a>
