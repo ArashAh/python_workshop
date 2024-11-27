@@ -255,7 +255,7 @@ Once `pipx` is installed, see [here](https://python-poetry.org/docs/#installing-
 ### Extensions
 
 - [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
-- [Juptyer](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+- [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 - [Black formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) (optional)
 - [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) (optional)
 - [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) (optional)
