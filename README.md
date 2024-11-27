@@ -119,15 +119,19 @@ The following command creates an isolated Python environment in the "my_venv" di
     </table>
    
 ### 3. Installing and Using Packages
-1. **Installing a package inside your environment:**
-   ```bash
-   pip install numpy
-    ```
-2. **Verify the installation:**
+1. **Check what packages you already have:**
    ```bash
    pip list
     ```
-3. **Compare with global python environment:**
+2. **Installing a package inside your environment:**
+   ```bash
+   pip install numpy
+    ```
+3. **Verify the installation:**
+   ```bash
+   pip list
+    ```
+4. **Compare with global python environment:**
 
     Deactivate your virtual environment
    ```bash
@@ -139,7 +143,7 @@ The following command creates an isolated Python environment in the "my_venv" di
    pip list
    ```
    
-4. **Reactivate your virtual environment:**
+5. **Reactivate your virtual environment:**
 
     <table>
       <tr>
@@ -164,16 +168,16 @@ The following command creates an isolated Python environment in the "my_venv" di
     </table>
 
    
-5. **Upgrading pip inside the environment:**
+6. **Upgrading pip inside the environment:**
    ```bash
    pip install --upgrade pip
    ```
-6. **Creating a requirements file:**
+7. **Creating a requirements file:**
    ```bash
    pip freeze > requirements.txt
    ```
    
-7. **Recreate your environment somewhere else:**
+8. **Recreate your environment somewhere else:**
 
     <table>
       <tr>
