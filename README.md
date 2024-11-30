@@ -332,7 +332,10 @@ jupyter lab
   </tr>
 </table>
 
-**Example notebook:** <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/refs/heads/main/scripts/Python_script_jupyter.ipynb" download>Download Notebook</a> (*right-click the link and choose "Save Link As..."*)
+**Download Example notebook**
+```
+wget https://raw.githubusercontent.com/ArashAh/python_workshop/refs/heads/main/scripts/Python_script_jupyter.ipynb
+```
 
 ## Production tools - HPC servers <a name="hpc"></a>
 We will demonstrate a simple python job submitted with Slurm on the Fox HPC cluster. If you have access to Fox and want to follow along, you can download the scripts needed: 
