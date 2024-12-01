@@ -337,6 +337,22 @@ jupyter lab
 wget https://raw.githubusercontent.com/ArashAh/python_workshop/refs/heads/main/scripts/Python_script_jupyter.ipynb
 ```
 
+**Extras** (Note: If any of the following commands do not work as expected, please make changes based on earlier exercises.)
+```
+python -m venv jupyterlab_env
+python -m venv kernel_env
+source jupyterlab_env/bin/activate
+pip install jupyterlab
+source kernel_env/bin/activate
+pip install ipykernel
+python -m ipykernel install --user --name=kernel_env --display-name "Python (kernel_env)"
+source jupyterlab_env/bin/activate
+jupyter lab
+
+jupyter kernelspec list
+jupyter kernelspec uninstall unwanted-kernel
+```
+
 ## Production tools - HPC servers <a name="hpc"></a>
 We will demonstrate a simple python job submitted with Slurm on the Fox HPC cluster. If you have access to Fox and want to follow along, you can download the scripts needed: 
 
