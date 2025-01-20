@@ -265,13 +265,156 @@ conda deactivate
 
 ## Package and environment management with poetry <a name="poetry"></a>
 
-Poetry requires python 3.8 or higher. For the final demonstration of this part of the workshop, python 3.10 (or higher) is required (optional).
+### 1. Install poetry
+
+Poetry requires python 3.9 or higher. Refer to [this earlier section](#1-check-your-python-version). For the final demonstration of this part of the workshop, python 3.10 (or higher) is required (optional).
 
 Once you have the right python version, it is recommended to install poetry using `pipx`.
 
 See [here](https://pipx.pypa.io/stable/installation/) on how to install `pipx`.
 
 Once `pipx` is installed, see [here](https://python-poetry.org/docs/#installing-with-pipx) on how to use it to install `poetry`
+
+
+
+### 2. Setting up a poetry environment
+
+1. **Create a new directory for the project:**
+
+
+See [here](#2-setting-up-a-virtual-environment-10-minutes) 
+Once you have a directory created, `cd` into it.
+
+
+2. **Create a poetry ("virtual") environment:**
+
+```bash
+poetry init my_poetry_proj
+```
+This will create an isolated poetry project in the current (working) directory called `my_poetry_proj`.
+
+This will ask you a series of questions to set up the project. You can skip this by using the `-n` flag:
+
+
+3. **Activate the virtual environment (and run python script):**
+
+
+```bash
+poetry shell
+```
+
+From here, you can run a python script:
+
+```bash
+python {your python script}.py
+```
+
+Alternatively, you can do the above to in one step:
+
+```bash
+poetry run python {your python script}.py
+```
+   
+It is possible to just use poetry for package management, but set up the virtual environmet with something else (e.g. conda), or not use a virtual environment at all.
+In this case, you would run:
+
+```bash
+poetry config virtualenvs.create false
+```
+All the previous (and below) commands are relevant, with the exception of `poetry shell`
+
+
+### 3. Installing and Using Packages
+
+1. **Installing a package inside your environment:**
+
+*Note: requires a poetry environment to be activated*
+
+```bash
+poetry add {package name} 
+```
+This will update the `pyproject.toml` and `poetry.lock` files
+
+2. **Check what packages you already have:**
+
+You can check the `pyproject.toml` or `poetry.lock` files.
+
+Alternatively, you can run the following command:
+
+```bash
+poetry show
+```
+
+And for even more detail, add the `--tree` flag:
+
+```bash
+poetry show --tree
+```
+
+3. **Update dependencies**
+
+You can update all dependencies by running:
+
+```bash
+poetry update
+```
+
+Or, for a specific package:
+
+```bash
+poetry update {package name 1} {package name 2} ...
+```
+
+
+### 4. **Recreate your environment somewhere else:**
+
+To recreate your environment, share your `pyproject.toml` and `poetry.lock` files with someone else. They can then run the following commands:
+
+Note: the user needs to install the correct python and poetry versions (which can be seen in the `pyproject.toml` file)
+
+Then, the user can run
+```bash
+poetry shell
+```
+
+to activate the poetry environment ("project"). The packages can be installed with
+
+```bash
+poetry install
+```
+
+
+
+   
+### 5. Cleanup
+
+- **Deactivate your environment:**
+
+You can either run
+
+```bash
+exit
+```
+or
+```bash
+deactivate
+```
+
+
+- **Delete your environment: (if needed)** 
+
+Within the directory that is defined as a poetry project, first list the available environments
+
+```bash
+poetry env list
+```
+
+Then, delete chosen environment with
+
+```bash
+poetry env remove {environment name}
+```
+
 
 ## VS Code <a name="vscode"></a>
 
