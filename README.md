@@ -275,7 +275,9 @@ Once `pipx` is installed, see [here](https://python-poetry.org/docs/#installing-
 
 ## VS Code <a name="vscode"></a>
 
-### Extensions
+### Install extensions
+
+The below lists the following extensions that will be used in the workshop. Click on each link for isntallation instructions 
 
 - [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
@@ -283,7 +285,7 @@ Once `pipx` is installed, see [here](https://python-poetry.org/docs/#installing-
 - [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) (optional)
 - [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) (optional)
 
-### Python interactive window
+### Setup for Python interactive window
 
 You need a VS Code version from 2024.
 
@@ -301,6 +303,145 @@ pip install nbconvert
 ```
 
 You also need the jupyter extension (see above)
+
+### Hands-on VS Code
+
+#### 1. General
+
+1. **General layout**
+
+![Image](https://github.com/user-attachments/assets/9142e0f9-bf8a-47bb-bfc5-1c7ad643ce0c)
+
+2. **Select python interpreter/environment**
+
+Click on:
+```
+Manage (cog wheel) -> Command Palette -> "> "Python: Select Interpreter" -> {choose desired environment/interpreter}
+```
+Or with keyboard shortcut 
+```
+Ctrl + shift + P "> "Python: Select Interpreter" -> {choose desired environment/interpreter}
+```
+
+### Formatting and linting
+
+![Image](https://github.com/user-attachments/assets/e6afdc13-f377-4c12-b004-9c1f3fd9b185)
+
+1. **Formatting Python in VS Code**
+
+There are lots of formatters in python, that are available in VS Code. We will be using `black` in this workshop.
+
+![Image](https://github.com/user-attachments/assets/a5a44be0-b319-4b12-b91f-ad5b229a66b1)
+
+
+`Right click (anywhere in open file) -> Format Document with -> Black Formatter`
+
+We will see how this changes `scripts/fizz_buzz.py`
+
+If you want to the formatter to be "activated" when saving a file at the workspace level, 
+Select:
+
+`Command Palette -> Preferences: Open Workspace Settings (JSON)`. 
+
+This will open / create `.vscode/settings.json`. This should be edited to:
+
+```json
+{
+    "[python]": {
+      "editor.formatOnSave": true,
+      "python.formatting.provider": "ms-python.black-formatter"
+    }
+}
+```
+See official [documentation](https://code.visualstudio.com/docs/python/formatting) for more details
+
+2 **Linting python in VS Code (minor)**
+
+Checks code for semantic and stylistic problems.
+
+![Image](https://github.com/user-attachments/assets/a304dd51-e5b1-479f-bcf2-f1daf3daee34)
+
+`Ctrl + shift + M`: open tab with list of “problems”
+
+Note: Unlike a formatter, in VS Code, this is by default activated  for *all* python files. Need to manually turn it off if not desired.
+
+
+### 3. Jupyter in VS Code
+
+1. **`.ipynb` files**
+- Markdown formatting 
+- Integrated text/code/output 
+- Running chunk by chunk 
+- Updating outputs independently 
+- Generating html or pdf render
+
+![Image](https://github.com/user-attachments/assets/38345b7c-4bf0-4efd-b133-7f861515a0d9)
+
+
+2. **Running "cells" in interactive mode**
+
+In a standard `.py` file, you can create cells by adding `# %%` at the beginning of a line.
+
+e.g.
+```python
+# %%
+x = 5
+y = 3
+print(x + y)
+```
+
+Markdown cells can be defined with `# %% [markdown]` at the beginning of a line.
+
+e.g.
+```python
+# %% [markdown]
+"""
+Add any desired text (in quotation marks) that you want displayed in the rendered jupyter file
+"""
+```
+
+Some useful shortcuts:
+
+* `ctrl + enter` = run current cell
+* `shift + enter` = run current cell and jump to next cell
+* `[ctrl + shift + ,] A` = insert cell above
+* `[ctrl + shift + ,] B` = insert cell below
+* `[ctrl + shift + ,] S` = insert cell below current position
+* `[ctrl + shift + ,] X` = delete selected cell(s)
+* `[ctrl + shift + ,] M` = change code cell to markdown
+* `[ctrl + shift + ,] C` = change (markdown) cell to code
+* `[ctrl + shift + ,] U` = move selected cell(s) up
+* `[ctrl + shift + ,] D` = move selected cell(s) down
+
+3. **Convert python to jupyter file (minor)**
+
+In a python file that has "cells":
+
+` Right click (anywhere in the file view) -> Export current python file as jupyter notebook`
+
+Then, to render the juptyer notebook as an HTML file, do:
+
+```bash
+jupyter nbconvert --to html --execute <name of jupyter file>.ipynb
+```
+
+4. **Variable view**
+
+To replicate the "global environment" window in RStudio, you can use the "Data Wrangler" extension.
+
+![Image](https://github.com/user-attachments/assets/1f057fcf-81de-4783-9e5c-dc6c63ae54f1)
+
+This lets you inspect a pandas dataframe in a spreadheet view, that can be opened as a separate window.
+
+Assuming you have a pandas dataframe in an "interactive window", you will see a new button:
+
+![Image](https://github.com/user-attachments/assets/7a06a0a0-da1b-4900-9eef-a32be12e3598)
+
+
+5. **Version control in VS Code**
+
+![Image](https://github.com/user-attachments/assets/139fc806-d5b3-4622-818a-d4f12938392f)
+
 
 ## JupyterLab <a name="jupyterlab"></a>
 Create a new virtual environment, activate it, install jupyerlab and start jupyterlab server.
