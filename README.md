@@ -267,7 +267,7 @@ conda deactivate
 
 ### 1. Install poetry
 
-Poetry requires python 3.8 or higher. Refer to [this earlier section](#1-check-your-python-version). For the final demonstration of this part of the workshop, python 3.10 (or higher) is required (optional).
+Poetry requires python 3.9 or higher. Refer to [this earlier section](#1-check-your-python-version). For the final demonstration of this part of the workshop, python 3.10 (or higher) is required (optional).
 
 Once you have the right python version, it is recommended to install poetry using `pipx`.
 
