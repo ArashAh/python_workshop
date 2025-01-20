@@ -277,13 +277,18 @@ Once `pipx` is installed, see [here](https://python-poetry.org/docs/#installing-
 
 ### Install extensions
 
-The below lists the following extensions that will be used in the workshop. Click on each link for isntallation instructions 
+The below lists the following extensions that will be used in the workshop. Click on each link for installation instructions 
 
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 - [Black formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) (optional)
 - [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) (optional)
 - [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) (optional)
+
+*Note: You can technically run python code without any of these extensions, but they have useful features.*
+
+*Note: The "Black formatter" and "Pylint" depend on the "Python" extension. "Jupyter" will allow you to run code in an "interactive window". "Data Wrangler" will allow you to inspect pandas dataframes in a spreadsheet view.*
 
 ### Setup for Python interactive window
 
