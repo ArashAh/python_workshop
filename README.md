@@ -1,5 +1,7 @@
 # Getting up-to-speed with Python: Workshop Materials
 
+This page contains the complementary material for the "Getting up to speed with Python" workshop. The material is designed to be used in the hands-on part of the workshop and is not supposed to be used as an stand-alone source of instructions. 
+
 - [Package and environment management with pip and venv](#environment)
 - [Package and environment management with conda](#conda)
 - [Package and environment management with poetry](#poetry)
@@ -453,14 +455,42 @@ pip install nbconvert
 You also need the jupyter extension (see above)
 
 ### Hands-on VS Code
-
-#### 1. General
+#### Basics 
 
 1. **General layout**
+  - Welcome page 
+  - Open folder 
+  - File system explorer and other tabs to the left
 
-![Image](https://github.com/user-attachments/assets/9142e0f9-bf8a-47bb-bfc5-1c7ad643ce0c)
 
-2. **Select python interpreter/environment**
+2. **Python files**
+  - Create a new python file  
+  - Add the following code to the file 
+  
+  ```Python
+  import numpy as np
+  import matplotlib.pyplot as plt
+  random_numbers = np.random.rand(100)
+  mean_value = np.mean(random_numbers)
+  print("Random numbers:", random_numbers)
+  print("Mean value:", mean_value)
+
+  # Create a plot
+  plt.figure(figsize=(10, 6))
+  plt.plot(random_numbers, marker='o', linestyle='-', color='b', label='Random Numbers')
+  plt.axhline(y=mean_value, color='r', linestyle='--', label=f'Mean Value: {mean_value:.2f}')
+  plt.title('Plot of 100 Random Numbers')
+  plt.xlabel('Index')
+  plt.ylabel('Value')
+  plt.legend()
+  plt.grid(True)
+  plt.show()
+
+  ```
+  - Save the file with this name: `demo-script.py`
+
+
+3. **Select python interpreter/environment**
 
 Click on:
 ```
@@ -471,16 +501,19 @@ Or with keyboard shortcut
 Ctrl + shift + P "> "Python: Select Interpreter" -> {choose desired environment/interpreter}
 ```
 
-### Formatting and linting
+4. **Run python script" 
+  - Open a new terminal and run 
+  ```
+  python demo-script.py
+  ```
+  - Do we have any alternative to run python code interactively? 
 
-![Image](https://github.com/user-attachments/assets/e6afdc13-f377-4c12-b004-9c1f3fd9b185)
+
+#### Formatting, linting and debugging 
 
 1. **Formatting Python in VS Code**
 
 There are lots of formatters in python, that are available in VS Code. We will be using `black` in this workshop.
-
-![Image](https://github.com/user-attachments/assets/a5a44be0-b319-4b12-b91f-ad5b229a66b1)
-
 
 `Right click (anywhere in open file) -> Format Document with -> Black Formatter`
 
@@ -507,14 +540,27 @@ See official [documentation](https://code.visualstudio.com/docs/python/formattin
 
 Checks code for semantic and stylistic problems.
 
-![Image](https://github.com/user-attachments/assets/a304dd51-e5b1-479f-bcf2-f1daf3daee34)
-
 `Ctrl + shift + M`: open tab with list of “problems”
 
 Note: Unlike a formatter, in VS Code, this is by default activated  for *all* python files. Need to manually turn it off if not desired.
 
+3. **Debugging in VS Code**
 
-### 3. Jupyter in VS Code
+An example of an error and how to trace the particular line in the code 
+
+
+#### Version (source) control in VS Code
+1. **Initiating a Git repo vs Clone from a GitHub repo**
+
+2. **Git status**
+
+3. Add/commit/push/pull 
+
+4. Git Graph 
+
+
+
+#### Jupyter in VS Code
 
 1. **`.ipynb` files**
 - Markdown formatting 
@@ -522,9 +568,6 @@ Note: Unlike a formatter, in VS Code, this is by default activated  for *all* py
 - Running chunk by chunk 
 - Updating outputs independently 
 - Generating html or pdf render
-
-![Image](https://github.com/user-attachments/assets/38345b7c-4bf0-4efd-b133-7f861515a0d9)
-
 
 2. **Running "cells" in interactive mode**
 
@@ -577,18 +620,12 @@ jupyter nbconvert --to html --execute <name of jupyter file>.ipynb
 
 To replicate the "global environment" window in RStudio, you can use the "Data Wrangler" extension.
 
-![Image](https://github.com/user-attachments/assets/1f057fcf-81de-4783-9e5c-dc6c63ae54f1)
-
 This lets you inspect a pandas dataframe in a spreadheet view, that can be opened as a separate window.
 
 Assuming you have a pandas dataframe in an "interactive window", you will see a new button:
 
-![Image](https://github.com/user-attachments/assets/7a06a0a0-da1b-4900-9eef-a32be12e3598)
 
 
-5. **Version control in VS Code**
-
-![Image](https://github.com/user-attachments/assets/139fc806-d5b3-4622-818a-d4f12938392f)
 
 
 ## JupyterLab <a name="jupyterlab"></a>
