@@ -422,24 +422,20 @@ poetry env remove {environment name}
 
 ### Install extensions
 
-The below lists the following extensions that will be used in the workshop. Click on each link for installation instructions 
+In this workshop, we will explore several extensions that enhance the functionality of VS Code for Python development. Click on each link for installation instructions: 
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
-- [Black formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) (optional)
-- [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) (optional)
-- [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) (optional)
+- [Black formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+- [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) 
+- [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) 
 
 *Note: You can technically run python code without any of these extensions, but they have useful features.*
 
 *Note: The "Black formatter" and "Pylint" depend on the "Python" extension. "Jupyter" will allow you to run code in an "interactive window". "Data Wrangler" will allow you to inspect pandas dataframes in a spreadsheet view.*
 
-### Setup for Python interactive window
-
-You need a VS Code version from 2024.
-
-See [here](https://code.visualstudio.com/docs/python/jupyter-support-py) for full details
+### Install libraries 
 
 How to install required libraries for this setup (ideally in an virtual environment):
 ```bash
@@ -451,6 +447,9 @@ Additional to convert a python file (.py) to jupyter notebook (.ipynb)
 ```bash
 pip install nbconvert
 ```
+In order to run python codes interactively, you need a VS Code version from 2024.
+
+See [here](https://code.visualstudio.com/docs/python/jupyter-support-py) for full details
 
 You also need the jupyter extension (see above)
 
@@ -460,7 +459,8 @@ You also need the jupyter extension (see above)
 1. **General layout**
   - Welcome page 
   - Open folder 
-  - File system explorer and other tabs to the left
+  - File system explorer 
+  - Other tabs located on the left panel
 
 
 2. **Python files**
@@ -492,16 +492,16 @@ You also need the jupyter extension (see above)
 
 3. **Select python interpreter/environment**
 
-Click on:
-```
-Manage (cog wheel) -> Command Palette -> "> "Python: Select Interpreter" -> {choose desired environment/interpreter}
-```
-Or with keyboard shortcut 
-```
-Ctrl + shift + P "> "Python: Select Interpreter" -> {choose desired environment/interpreter}
-```
+  - Click on:
+  `
+  Manage (cog wheel) -> Command Palette ->  "Python: Select Interpreter" -> {choose desired environment/interpreter}
+  `
+  - Or with keyboard shortcut 
+  `
+  Ctrl + shift + P "> "Python: Select Interpreter" -> {choose desired environment/interpreter}
+  `
 
-4. **Run python script" 
+4. **Run python script** 
   - Open a new terminal and run 
   ```
   python demo-script.py
@@ -513,18 +513,18 @@ Ctrl + shift + P "> "Python: Select Interpreter" -> {choose desired environment/
 
 1. **Formatting Python in VS Code**
 
-There are lots of formatters in python, that are available in VS Code. We will be using `black` in this workshop.
+  - There are lots of formatters in python, that are available in VS Code. We will be using `black` in this workshop.
 
-`Right click (anywhere in open file) -> Format Document with -> Black Formatter`
+     `Right click (anywhere in open file) -> Format Document with -> Black Formatter`
 
-We will see how this changes `scripts/fizz_buzz.py`
+  - We will see how this changes `scripts/fizz_buzz.py`
 
-If you want to the formatter to be "activated" when saving a file at the workspace level, 
-Select:
+  - If you want to the formatter to be "activated" when saving a file at the workspace level, 
+    Select:
 
-`Command Palette -> Preferences: Open Workspace Settings (JSON)`. 
+    `Command Palette -> Preferences: Open Workspace Settings (JSON)`. 
 
-This will open / create `.vscode/settings.json`. This should be edited to:
+  - This will open / create `.vscode/settings.json`. This should be edited to:
 
 ```json
 {
@@ -534,45 +534,59 @@ This will open / create `.vscode/settings.json`. This should be edited to:
     }
 }
 ```
-See official [documentation](https://code.visualstudio.com/docs/python/formatting) for more details
+  - See official [documentation](https://code.visualstudio.com/docs/python/formatting) for more details
 
-2 **Linting python in VS Code (minor)**
+2. **Linting python in VS Code**
 
-Checks code for semantic and stylistic problems.
+  - Checks code for semantic and stylistic problems.
 
-`Ctrl + shift + M`: open tab with list of “problems”
+  - To open tab with list of “problems” press: `Ctrl + shift + M`: 
 
-Note: Unlike a formatter, in VS Code, this is by default activated  for *all* python files. Need to manually turn it off if not desired.
+  - Note: Unlike a formatter, in VS Code, this is by default activated  for *all* python files. Need to manually turn it off if not desired.
 
 3. **Debugging in VS Code**
 
-An example of an error and how to trace the particular line in the code 
+  - An example of an error and how to trace the particular line in the code 
 
 
 #### Version (source) control in VS Code
-1. **Initiating a Git repo vs Clone from a GitHub repo**
+1. **Initiate a Git repo**
+  - Select a desired directory for the demo 
+  - To initialize the repo click on the `Source control` tab and then `Initialize Repository`
 
-2. **Git status**
+2. **Add/commit** 
+  - Open a new text file and save it in the same directory 
+  - On VS Code Click on the `Source control` tab, add and commit 
 
-3. Add/commit/push/pull 
+3. **Push a local repo to GitHub**
+  - Click on `publish Branch`
+  - Potentially authenticate your GitHub with VS Code 
+  - Approve the creation of the repo on GitHub 
+  - Check the result on GitHub 
 
-4. Git Graph 
+4. **Clone from a GitHub repo**
+  - Close VS Code and delete the directory you made in step 1 
+  - On GitHub, go to the repo you made in step 3 and copy the `HTTPS` of the repo
+  - on VS Code open another folder to clone the repo into 
+  - Press `Ctrl + shift + p` -> type `Git:Clone` -> select `Clone from GitHub`-> paste `the HTTPS of the repo`
+
+5. **Git Graph** 
+  - Use Git Graph to keep track of the project's histoy 
 
 
 
 #### Jupyter in VS Code
 
 1. **`.ipynb` files**
-- Markdown formatting 
-- Integrated text/code/output 
-- Running chunk by chunk 
-- Updating outputs independently 
-- Generating html or pdf render
+ - Markdown formatting 
+ - Integrated text/code/output 
+ - Running chunk by chunk 
+ - Updating outputs independently 
+ - Generating html or pdf render
 
 2. **Running "cells" in interactive mode**
 
-In a standard `.py` file, you can create cells by adding `# %%` at the beginning of a line.
-
+ - In a standard `.py` file, you can create cells by adding `# %%` at the beginning of a line.
 e.g.
 ```python
 # %%
@@ -581,8 +595,7 @@ y = 3
 print(x + y)
 ```
 
-Markdown cells can be defined with `# %% [markdown]` at the beginning of a line.
-
+ - Markdown cells can be defined with `# %% [markdown]` at the beginning of a line.
 e.g.
 ```python
 # %% [markdown]
@@ -591,7 +604,7 @@ Add any desired text (in quotation marks) that you want displayed in the rendere
 """
 ```
 
-Some useful shortcuts:
+3. **Some useful shortcuts:**
 
 * `ctrl + enter` = run current cell
 * `shift + enter` = run current cell and jump to next cell
@@ -606,23 +619,25 @@ Some useful shortcuts:
 
 3. **Convert python to jupyter file (minor)**
 
-In a python file that has "cells":
+ - In a python file that has "cells":
 
-` Right click (anywhere in the file view) -> Export current python file as jupyter notebook`
+   `Right click (anywhere in the file view) -> Export current python file as jupyter notebook`
 
-Then, to render the juptyer notebook as an HTML file, do:
+- Then, to render the juptyer notebook as an HTML file, do:
 
 ```bash
 jupyter nbconvert --to html --execute <name of jupyter file>.ipynb
 ```
 
+- or simply Click on the `...` on top of the notebook and select `Export as html`
+
 4. **Variable view**
 
-To replicate the "global environment" window in RStudio, you can use the "Data Wrangler" extension.
+ - To replicate the "global environment" window in RStudio, you can use the "Data Wrangler" extension.
 
-This lets you inspect a pandas dataframe in a spreadheet view, that can be opened as a separate window.
+- This lets you inspect a pandas dataframe in a spreadheet view, that can be opened as a separate window.
 
-Assuming you have a pandas dataframe in an "interactive window", you will see a new button:
+- Assuming you have a pandas dataframe in an "interactive window", you will see a new button. 
 
 
 
