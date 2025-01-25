@@ -640,59 +640,21 @@ You also need the jupyter extension (see above)
     - Assuming you have a pandas dataframe in an "interactive window", you will see a new button. 
 
 
+#### Using your own virtual environments for Jupyter in VS Code
+1. Open an empty source folder in VS Code.
+2. Download the notebook from https://github.com/ArashAh/python_workshop/blob/main/scripts/Python_script_jupyter.ipynb
+3. Copy the downloaded notebook to the source folder and open it in VS Code.
+4. **Setup a virtual environment** for the notebook. 
+     - Click on "Select Kernel" at the top right.
+     - Choose "Python Environments" > "+ Create Python Environment" > "Venv".
+     - Select an available Python installation.
+     - A new .venv folder will appear in your explorer.
+5. **Run the notebook**
+     - Click "Run All"
+     - If prompted, install the `ipykernel` package.
+     - You will see a `ModuleNotFoundError`, open the VS Code terminal and run `pip install matplotlib`
+     - Click "Run All" again to execute all cells.
 
-
-
-## JupyterLab <a name="jupyterlab"></a>
-Create a new virtual environment, activate it, install jupyerlab and start jupyterlab server.
-<table>
-  <tr>
-    <td>
-      <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Badge">
-      <pre>
-      <code>
-python -m venv jup_venv
-.\jup_venv\Scripts\activate
-pip install jupyterlab
-jupyter lab
-      </code>
-      </pre>
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macOS Badge">
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge">
-      <pre>
-      <code>
-python3 -m venv jup_venv
-source jup_venv/bin/activate
-pip install jupyterlab
-jupyter lab
-      </code>
-      </pre>
-    </td>
-  </tr>
-</table>
-
-**Download Example notebook**
-```
-wget https://raw.githubusercontent.com/ArashAh/python_workshop/refs/heads/main/scripts/Python_script_jupyter.ipynb
-```
-
-**Extras** (Note: If any of the following commands do not work as expected, please make changes based on earlier exercises.)
-```
-python -m venv jupyterlab_env
-python -m venv kernel_env
-source jupyterlab_env/bin/activate
-pip install jupyterlab
-source kernel_env/bin/activate
-pip install ipykernel
-python -m ipykernel install --user --name=kernel_env --display-name "Python (kernel_env)"
-source jupyterlab_env/bin/activate
-jupyter lab
-
-jupyter kernelspec list
-jupyter kernelspec uninstall unwanted-kernel
-```
 
 ## Production tools - HPC servers <a name="hpc"></a>
 We will demonstrate a simple python job submitted with Slurm on the Fox HPC cluster. If you have access to Fox and want to follow along, you can download the scripts needed: 
