@@ -241,6 +241,15 @@ rm -rf new_venv
 </table>
 
 
+---
+**NOTE**
+
+- To inherit packages from the global python environment, use `--system-site-packages` during environment creation.
+
+  **Example:** `python3 -m venv myvenv --system-site-packages`
+
+---
+
 ## Package and environment management with conda <a name="conda"></a>
 
 These are the options for Conda installation (Anaconda is not required for the workshop) [https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
