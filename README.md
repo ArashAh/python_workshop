@@ -459,7 +459,9 @@ poetry env remove {environment name}
 ```
 
 ### 6. Additional
-   
+
+1. **Poetry just for package managment**
+
 It is possible to just use poetry for package management, but set up the virtual environmet with something else (e.g. conda), or not use a virtual environment at all.
 In this case, you would run:
 
@@ -467,6 +469,19 @@ In this case, you would run:
 poetry config virtualenvs.create false
 ```
 All the above commands are relevant, with the exception of `poetry shell`
+
+
+2. **Poetry subfolder in VS Code**
+
+VS Code “python: select interpreter” will automatically detect poetry environments in the working directory
+
+If elsewhere (e.g. subfolder), need to manually specify the path
+
+```bash
+poetry env info -p {in directory containing poetry configs}
+```
+
+Paste path from above into the “Enter interpreter path”
 
 
 ## VS Code <a name="vscode"></a>
