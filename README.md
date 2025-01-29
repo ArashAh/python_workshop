@@ -612,8 +612,22 @@ You also need the jupyter extension (see above)
 
 3. **Debugging in VS Code**
 
-    - An example of an error and how to trace the particular line in the code 
+The basic options are:
 
+1. Continue (F5): 
+    - Continue running the code until the next breakpoint, or to the end of the script, or until an error occurs.
+2. Step Over (F10): 
+    - Run the next line of code, but do not go into functions (see next option)
+3. Step Into (F11)
+    - Run the next line of code, and go into functions
+4. Step out (Shift+F11)
+    - Complete the current function (that you have "stepped into")
+
+Run the debugger on a python file (e.g. `scripts/code_debug.py`) and it will continue until there is an error.
+
+Can set a "breakpoint" where you want the code to stop, to inspect objects (called "variables" in the debugger: "locals" and "globals").
+
+We will go over examples of the options above with the `scripts/code_debug.py`
 
 #### Version (source) control in VS Code
 1. **Initiate a Git repo**
