@@ -252,27 +252,88 @@ rm -rf new_venv
 
 ## Package and environment management with conda <a name="conda"></a>
 
-These are the options for Conda installation (Anaconda is not required for the workshop) [https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
+### 1. Get started
+These are the options for Conda installation (Anaconda is not required for the workshop):[https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-Removing the defaults channel, and (just in case) adding the conda-forge channel:
-````
+You may have to perform some further steps to activate Conda. Consult [https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+
+Remove the defaults channel, and add the conda-forge channel (unless already present):
+```
 conda config --remove channels defaults
 conda config --add channels conda-forge
-`````
+```
+List current channels:
+```
+conda config --show channels
+````
 
-Example Conda session. Pip is used inside a Conda environment:
+### 2. Create a new virtual environment
+Create a Conda environment. Specify Python version
 ```
 conda create --name my-own-test-env python=3.11 
+```
+The new environment will be located inside a folder in a default location (It is possible to override the default location). To look up the location, you can use
+```
+conda info
+```
+Look under `active env location`.
+
+### 3. Install a package
+Activate the environment and install a package
+```
 conda activate my-own-test-env 
 conda install pandas
-where pip
-conda install pip
-pip install scikit-learn
-conda list
-conda env export --from-history
-conda deactivate
 ```
 
+### 4. Use Pip within a Conda environment
+Do we have Pip inside the environment?
+```
+where pip
+```
+Is the `pip` executable inside the Conda environment folder? If not, install it:
+```
+conda install pip
+```
+Install a package with pip:
+```
+pip install scikit-learn
+````
+Both Pandas and Scikit-learn depend on Numpy. Did Pip reinstall Numpy, or did it find that Numpy was already installed when we installed Pandas?
+
+Note that Scikit-learn is also available from Conda, but we want to try out Pip here.
+
+### 5. Document an environment
+List the primary dependencies:
+```
+conda env export --from-history
+```
+Was scikit-learn listed?
+
+Also try these:
+```
+conda env export
+conda list
+conda list --explicit
+```
+These document the environment in various level of detail.
+
+### 6. Reproduce an environment
+List all dependencies, including version number, and write the output to a yaml file:
+```
+conda env export > environment.yml
+```
+(This level of detail may be too high for sharing across systems)
+
+Deactivate the environment:
+```
+conda deactivate
+```
+Recreate the environment based on the yaml file:
+```
+conda env create --name test-my-yml --file environment.yml
+```
+
+Activate the new environment, and verify that packages were installed.
 
 ## Package and environment management with poetry <a name="poetry"></a>
 
