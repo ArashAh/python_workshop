@@ -330,7 +330,7 @@ conda deactivate
 ```
 Recreate the environment based on the yaml file:
 ```
-conda env create –-name test-my-yml --file environment.yml
+conda env create --name test-my-yml --file environment.yml
 ```
 
 Activate the new environment, and verify that packages were installed.
