@@ -294,18 +294,34 @@ Once `pipx` is installed, see [here](https://python-poetry.org/docs/#installing-
 
 
 See [here](#2-setting-up-a-virtual-environment-10-minutes) 
-Once you have a directory created, `cd` into it.
+Create a directory `my_poetry_project` (ideally, within this repo), and `cd` into it .
 
 
 2. **Create a poetry ("virtual") environment:**
 
 ```bash
-poetry init my_poetry_proj
+poetry init 
 ```
 This will create an isolated poetry project in the current (working) directory called `my_poetry_proj`.
 
 This will ask you a series of questions to set up the project. You can skip this by using the `-n` flag:
 
+You can in principle add packages, but due to a current "bug" (change in PyPi search results), this is not working as expected.
+
+*Note: you can alternatively, create a new directory with poetry directly, which will skip the interactive setup, and set some defaults in the configuration files*
+
+```bash
+poetry new my_poetry_proj
+```
+
+This will create a `pyproject.toml` file, which is the configuration file for poetry.
+
+By default, poetry will assume you are creating a package. For clarity, and to avoid potential any errors (unless your codebase is is set up as a valid python package),
+
+add the following to the `pyproject.toml`:
+```toml
+package-mode = false
+```
 
 3. **Activate the virtual environment (and run python script):**
 
@@ -317,23 +333,16 @@ poetry shell
 From here, you can run a python script:
 
 ```bash
-python {your python script}.py
+python path/to/python_workshop/scripts/pd_data.py
 ```
 
 Alternatively, you can do the above to in one step:
 
 ```bash
-poetry run python {your python script}.py
+poetry run python path/to/python_workshop/scripts/pd_data.py
 ```
-   
-It is possible to just use poetry for package management, but set up the virtual environmet with something else (e.g. conda), or not use a virtual environment at all.
-In this case, you would run:
 
-```bash
-poetry config virtualenvs.create false
-```
-All the previous (and below) commands are relevant, with the exception of `poetry shell`
-
+*Note: the above two lines will not work, because we are missing the packages*
 
 ### 3. Installing and Using Packages
 
@@ -344,7 +353,28 @@ All the previous (and below) commands are relevant, with the exception of `poetr
 ```bash
 poetry add {package name} 
 ```
-This will update the `pyproject.toml` and `poetry.lock` files
+
+Specifically, we will add `numpy` and `pandas`:
+
+```bash
+poetry add numpy 
+poetry add pandas
+```
+
+Or in one line:
+
+```bash
+poetry add numpy pandas
+```
+
+This will update the `pyproject.toml` and `poetry.lock` (or create the latter if it does not exist)
+
+Now, we will be able to successfully run the python script:
+
+```bash
+python path/to/python_workshop/scripts/pd_data.py
+```
+
 
 2. **Check what packages you already have:**
 
@@ -394,9 +424,11 @@ to activate the poetry environment ("project"). The packages can be installed wi
 poetry install
 ```
 
+We will see how this works by installing dependencies and running a microservice from another repo (to be done together)
+
+*Note: in the example, we will most likely have to add `package-mode = false` to the `pyproject.toml` file, as the microservice is not a valid python package.*
 
 
-   
 ### 5. Cleanup
 
 - **Deactivate your environment:**
@@ -425,6 +457,31 @@ Then, delete chosen environment with
 ```bash
 poetry env remove {environment name}
 ```
+
+### 6. Additional
+
+1. **Poetry just for package managment**
+
+It is possible to just use poetry for package management, but set up the virtual environmet with something else (e.g. conda), or not use a virtual environment at all.
+In this case, you would run:
+
+```bash
+poetry config virtualenvs.create false
+```
+All the above commands are relevant, with the exception of `poetry shell`
+
+
+2. **Poetry subfolder in VS Code**
+
+VS Code “python: select interpreter” will automatically detect poetry environments in the working directory
+
+If elsewhere (e.g. subfolder), need to manually specify the path
+
+```bash
+poetry env info -p {in directory containing poetry configs}
+```
+
+Paste path from above into the “Enter interpreter path”
 
 
 ## VS Code <a name="vscode"></a>
