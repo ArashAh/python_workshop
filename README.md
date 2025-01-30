@@ -398,6 +398,8 @@ package-mode = false
 poetry shell
 ```
 
+❓ Do you notice any changes in the terminal?
+
 From here, you can run a python script:
 
 ```bash
@@ -437,6 +439,8 @@ poetry add numpy pandas
 
 This will update the `pyproject.toml` and `poetry.lock` (or create the latter if it does not exist)
 
+❓ What exact differences do you see in the `pyproject.toml` and `poetry.lock` files?
+
 Now, we will be able to successfully run the python script:
 
 ```bash
@@ -459,6 +463,8 @@ And for even more detail, add the `--tree` flag:
 ```bash
 poetry show --tree
 ```
+
+❓ What differences do you see without and with the `--tree` flag?
 
 3. **Update dependencies**
 
@@ -514,11 +520,18 @@ deactivate
 
 - **Delete your environment: (if needed)** 
 
-Within the directory that is defined as a poetry project, first list the available environments
+Within the directory that is defined as a poetry project, first, start poetry:
+
+```bash
+poetry shell
+```
+
+Then, list the available environments
 
 ```bash
 poetry env list
 ```
+❓ Which environment(s) do you see?
 
 Then, delete chosen environment with
 
