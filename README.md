@@ -765,6 +765,8 @@ We will go over examples of the options above with the `scripts/code_debug.py`
     """
     ```
 
+    ❓ What happens when you try to run the above (markdown) cell?
+
 3. **Some useful shortcuts:**
 
     * `ctrl + enter` = run current cell
@@ -791,6 +793,8 @@ We will go over examples of the options above with the `scripts/code_debug.py`
     ```
 
     - or simply Click on the `...` on top of the notebook and select `Export as html`
+
+    ❓ What does this newly created file look like when you open it in VS Code?
 
 5. **Variable view**
 
