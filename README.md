@@ -5,8 +5,7 @@ This page contains the complementary material for the "Getting up to speed with 
 - [Package and environment management with pip and venv](#environment)
 - [Package and environment management with conda](#conda)
 - [Package and environment management with poetry](#poetry)
-- [VS Code](#vscode)
-- [JupyterLab](#jupyterlab)
+- [Prototyping tools - VS Code](#vscode)
 - [Production tools - HPC servers](#hpc)
 
 ----
@@ -521,9 +520,9 @@ poetry env remove {environment name}
 
 ### 6. Additional
 
-1. **Poetry just for package managment**
+1. **Poetry just for package management**
 
-It is possible to just use poetry for package management, but set up the virtual environmet with something else (e.g. conda), or not use a virtual environment at all.
+It is possible to just use poetry for package management, but set up the virtual environment with something else (e.g. conda), or not use a virtual environment at all.
 In this case, you would run:
 
 ```bash
@@ -545,7 +544,7 @@ poetry env info -p {in directory containing poetry configs}
 Paste path from above into the “Enter interpreter path”
 
 
-## VS Code <a name="vscode"></a>
+## Prototyping tools - VS Code <a name="vscode"></a>
 
 ### Install extensions
 
@@ -616,8 +615,19 @@ You also need the jupyter extension (see above)
    ```
    - Save the file with this name: `demo-script.py`
 
+3. **Run python script using the global environment** 
+    - Open a new terminal, navigate to the directory where you saved the file and run 
+    ```
+    python demo-script.py
+    ```
+4. **Run python script using the virtual environment**
+    - Activate the virtual environment you made previously and then run 
+    ```
+    python demo-script.py
+    ```
+    - This time python runs the code in the virtual environment and you will get an error if you don't have `numpy` and `matplotlib` installed in that environment. 
 
-3. **Select python interpreter/environment**
+5. **Select python interpreter/environment for an interactive run in VS Code**
 
     - Click on:
     `
@@ -627,13 +637,8 @@ You also need the jupyter extension (see above)
     `
     Ctrl + shift + P "> "Python: Select Interpreter" -> {choose desired environment/interpreter}
     `
-
-4. **Run python script** 
-    - Open a new terminal and run 
-    ```
-    python demo-script.py
-    ```
-    - Do we have any alternative to run python code interactively? 
+6. **Run python script interactively**
+    - Try running the code interactively using various alternatives 
 
 
 #### Formatting, linting and debugging 
@@ -712,7 +717,7 @@ We will go over examples of the options above with the `scripts/code_debug.py`
     - Press `Ctrl + shift + p` -> type `Git:Clone` -> select `Clone from GitHub`-> paste `the HTTPS of the repo`
 
 5. **Git Graph** 
-    - Use Git Graph to keep track of the project's histoy 
+    - Use Git Graph to keep track of the project's history 
 
 
 
@@ -770,7 +775,7 @@ We will go over examples of the options above with the `scripts/code_debug.py`
     jupyter nbconvert --to html --execute <name of jupyter file>.ipynb
     ```
 
-    - or simply Click on the `...` on top of the notebook and select `Export as html`
+    - or simply Click on the `...` on top of the notebook and select `Export` -> `HTML`
 
 5. **Variable view**
 
