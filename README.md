@@ -267,21 +267,28 @@ List current channels:
 conda config --show channels
 ````
 
-### 2. Create a new virtual environment
+### 2. Set up a new virtual environment
 Create a Conda environment. Specify Python version
 ```
 conda create --name my-own-test-env python=3.11 
 ```
+Activate the environment:
+```
+conda activate my-own-test-env 
+```
+Do you now see an indication that `my-own-test-env` is active?
+
 The new environment will be located inside a folder in a default location (It is possible to override the default location). To look up the location, you can use
 ```
 conda info
 ```
-Look under `active env location`.
+Look under `active env location`. Python should already be in there -- verify this with e.g. `where python`. Do you have the expected version of Python?
 
 ### 3. Install a package
-Activate the environment and install a package
+If you haven't already, activate the environment first.
+
+Install a package with Conda: 
 ```
-conda activate my-own-test-env 
 conda install pandas
 ```
 
