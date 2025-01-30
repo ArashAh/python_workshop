@@ -790,7 +790,7 @@ We will go over examples of the options above with the `scripts/code_debug.py`
 
 #### Using your own virtual environments for Jupyter in VS Code
 1. Open an empty source folder in VS Code.
-2. Download the notebook from https://github.com/ArashAh/python_workshop/blob/main/scripts/Python_script_jupyter.ipynb
+2. Download the notebook from <a href="https://github.com/ArashAh/python_workshop/blob/main/scripts/Python_script_jupyter.ipynb" download>this link</a> (Right click --> Save link as...)
 3. Copy the downloaded notebook to the source folder and open it in VS Code.
 4. **Setup a virtual environment** for the notebook. 
      - Click on "Select Kernel" at the top right.
