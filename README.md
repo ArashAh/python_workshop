@@ -250,7 +250,7 @@ rm -rf new_venv
   **Example:** `python3 -m venv myvenv --system-site-packages`
 
 ---
-[Back to the table of content](#top) 
+[Back to table of content](#top) 
 ## Package and environment management with conda <a name="conda"></a>
 
 ### 1. Get started
@@ -335,6 +335,8 @@ conda env create --name test-my-yml --file environment.yml
 ```
 
 Activate the new environment, and verify that packages were installed.
+
+[Back to table of content](#top) 
 
 ## Package and environment management with poetry <a name="poetry"></a>
 
@@ -545,6 +547,7 @@ poetry env info -p {in directory containing poetry configs}
 
 Paste path from above into the “Enter interpreter path”
 
+[Back to table of content](#top)  
 
 ## Prototyping tools - VS Code <a name="vscode"></a>
 
@@ -783,6 +786,7 @@ Can set a "breakpoint" where you want the code to stop, to inspect objects (call
      - You will see a `ModuleNotFoundError`, open the VS Code terminal and run `pip install matplotlib`
      - Click "Run All" again to execute all cells.
 
+[Back to table of content](#top) 
 
 ## Production tools - HPC servers <a name="hpc"></a>
 We will demonstrate a simple python job submitted with Slurm on the Fox HPC cluster. If you have access to Fox and want to follow along, you can download the scripts needed: 
