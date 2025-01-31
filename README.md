@@ -398,6 +398,8 @@ package-mode = false
 poetry shell
 ```
 
+❓ Do you notice any changes in the terminal?
+
 From here, you can run a python script:
 
 ```bash
@@ -437,6 +439,8 @@ poetry add numpy pandas
 
 This will update the `pyproject.toml` and `poetry.lock` (or create the latter if it does not exist)
 
+❓ What exact differences do you see in the `pyproject.toml` and `poetry.lock` files?
+
 Now, we will be able to successfully run the python script:
 
 ```bash
@@ -459,6 +463,8 @@ And for even more detail, add the `--tree` flag:
 ```bash
 poetry show --tree
 ```
+
+❓ What differences do you see without and with the `--tree` flag?
 
 3. **Update dependencies**
 
@@ -514,11 +520,18 @@ deactivate
 
 - **Delete your environment: (if needed)** 
 
-Within the directory that is defined as a poetry project, first list the available environments
+Within the directory that is defined as a poetry project, first, start poetry:
+
+```bash
+poetry shell
+```
+
+Then, list the available environments
 
 ```bash
 poetry env list
 ```
+❓ Which environment(s) do you see?
 
 Then, delete chosen environment with
 
@@ -596,6 +609,9 @@ You also need the jupyter extension (see above)
     - File system explorer 
     - Other tabs located on the left panel
 
+In general,root "folder" (i.e. the one you are in with "Open folder") is your "workspace"
+
+Can think of it as an Rstudio project (becomes your base working directory)
 
 2. **Python files**
     - Create a new python file  
@@ -752,6 +768,8 @@ We will go over examples of the options above with the `scripts/code_debug.py`
     """
     ```
 
+    ❓ What happens when you try to run the above (markdown) cell?
+
 3. **Some useful shortcuts:**
 
     * `ctrl + enter` = run current cell
@@ -778,6 +796,8 @@ We will go over examples of the options above with the `scripts/code_debug.py`
     ```
 
     - or simply Click on the `...` on top of the notebook and select `Export as html`
+
+    ❓ What does this newly created file look like when you open it in VS Code?
 
 5. **Variable view**
 
