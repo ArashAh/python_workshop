@@ -590,7 +590,7 @@ You also need the jupyter extension (see above)
 
 
 2. **Python files**
-    - Click on this <a href="https://github.com/ArashAh/python_workshop/blob/main/scripts/frsit_run.ipynb" download> link</a> and copy the content
+    - Click on this <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/frsit_run.ipynb" download> link</a> and copy the content
     - Create a new python file and paste the copied content to it 
     - Save the file with this name: `demo-script.py`
 
@@ -628,7 +628,7 @@ You also need the jupyter extension (see above)
 
       `Right click (anywhere in open file) -> Format Document with -> Black Formatter`
 
-    - We will see how this changes the format of the content in <a href="https://github.com/ArashAh/python_workshop/blob/main/scripts/fizz_buzz.py" download>this link</a> 
+    - We will see how this changes the format of the content in <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/fizz_buzz.py" download>this link</a> 
 
     - If you want to the formatter to be "activated" when saving a file at the workspace level, 
       Select:
@@ -656,7 +656,8 @@ You also need the jupyter extension (see above)
     - Note: Unlike a formatter, in VS Code, this is by default activated  for *all* python files. Need to manually turn it off if not desired.
 
 3. **Debugging in VS Code**
-Download the example code for debugging by right clicking <a href="https://github.com/ArashAh/python_workshop/blob/main/scripts/code_debug.py" download>this link</a> and then **Save link as...**
+   
+Download the example code for debugging by right clicking <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/code_debug.py" download>this link</a> and then **Save link as...**
 
 The basic options are:
 
