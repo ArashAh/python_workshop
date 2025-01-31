@@ -2,6 +2,8 @@
 
 This page contains the complementary material for the "Getting up to speed with Python" workshop. The material is designed to be used in the hands-on part of the workshop and is not supposed to be used as an stand-alone source of instructions. 
 
+## Table of content <a name="top"></a>
+
 - [Package and environment management with pip and venv](#environment)
 - [Package and environment management with conda](#conda)
 - [Package and environment management with poetry](#poetry)
@@ -248,7 +250,7 @@ rm -rf new_venv
   **Example:** `python3 -m venv myvenv --system-site-packages`
 
 ---
-
+[Back to the table of content](#top) 
 ## Package and environment management with conda <a name="conda"></a>
 
 ### 1. Get started
