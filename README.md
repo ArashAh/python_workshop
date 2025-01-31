@@ -646,7 +646,7 @@ In general,root "folder" (i.e. the one you are in with "Open folder") is your "w
 Can think of it as an Rstudio project (becomes your base working directory)
 
 2. **Python files**
-    - Click on this <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/frsit_run.ipynb" download> link</a> and copy the content
+    - Click on this <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/First_run.py" download> link</a> and copy the content
     - Create a new python file and paste the copied content to it 
     - Save the file with this name: `demo-script.py`
 
