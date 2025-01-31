@@ -97,6 +97,10 @@ The following command creates an isolated Python environment in the "my_venv" di
       </tr>
     </table>
 
+> ❓ Why might you want different virtual environments for different projects?
+>
+> ❓ What happens if you do not use a virtual environment at all?
+
 3. **Activate the virtual environment:**
 
     <table>
@@ -120,20 +124,34 @@ The following command creates an isolated Python environment in the "my_venv" di
         </td>
       </tr>
     </table>
+
+> ❓ How can you tell if your virtual environment is activated?
+>
+> ❓ What changes in your terminal prompt or path once the environment is active?
    
 ### 3. Installing and Using Packages
 1. **Check what packages you already have:**
    ```bash
    pip list
     ```
+> ❓ Do you see any packages listed here? Why might it be empty or show fewer packages than your global environment?
+
 2. **Installing a package inside your environment:**
    ```bash
    pip install numpy
     ```
+   
+> ❓ Why do you install packages within the environment instead of globally?
+>
+> ❓ What advantages does this provide in managing dependencies?
+
 3. **Verify the installation:**
    ```bash
    pip list
     ```
+   
+> ❓ Do you see your newly installed package (e.g., numpy) in the list now?
+
 4. **Compare with global python environment:**
 
     Deactivate your virtual environment
@@ -145,6 +163,8 @@ The following command creates an isolated Python environment in the "my_venv" di
    ```bash
    pip list
    ```
+   
+> ❓ Do you notice the difference in packages between the virtual environment and the global environment?
    
 5. **Reactivate your virtual environment:**
 
@@ -179,7 +199,11 @@ The following command creates an isolated Python environment in the "my_venv" di
    ```bash
    pip freeze > requirements.txt
    ```
-   
+
+> ❓ Do you see all the packages you installed inside requirements.txt?
+> 
+> ❓ Why is it useful to have a requirements.txt file for your project?
+
 8. **Recreate your environment somewhere else:**
 
     <table>
@@ -207,7 +231,11 @@ The following command creates an isolated Python environment in the "my_venv" di
         </td>
       </tr>
     </table>
-   
+
+> ❓ What would happen if you tried to install from requirements.txt in the global environment?
+> 
+> ❓ Why is this approach beneficial when sharing your project with others?
+
 ### 4. Cleanup
 
 - **Deactivate your environment:**
@@ -240,7 +268,7 @@ rm -rf new_venv
   </tr>
 </table>
 
-
+> ❓ When might you want to remove a virtual environment entirely?
 ---
 **NOTE**
 
@@ -810,7 +838,7 @@ We will go over examples of the options above with the `scripts/code_debug.py`
 
 #### Using your own virtual environments for Jupyter in VS Code
 1. Open an empty source folder in VS Code.
-2. Download the notebook from <a href="https://github.com/ArashAh/python_workshop/blob/main/scripts/Python_script_jupyter.ipynb" download>this link</a> (Right click --> Save link as...)
+2. Download the notebook by right clicking <a href="https://github.com/ArashAh/python_workshop/blob/main/scripts/Python_script_jupyter.ipynb" download>this link</a> and then **Save link as...**
 3. Copy the downloaded notebook to the source folder and open it in VS Code.
 4. **Setup a virtual environment** for the notebook. 
      - Click on "Select Kernel" at the top right.
