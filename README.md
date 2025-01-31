@@ -609,6 +609,9 @@ You also need the jupyter extension (see above)
     - File system explorer 
     - Other tabs located on the left panel
 
+In general,root "folder" (i.e. the one you are in with "Open folder") is your "workspace"
+
+Can think of it as an Rstudio project (becomes your base working directory)
 
 2. **Python files**
     - Create a new python file  
