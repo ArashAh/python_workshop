@@ -305,13 +305,15 @@ Activate the environment:
 ```
 conda activate my-own-test-env 
 ```
-Do you now see an indication that `my-own-test-env` is active?
+
+❓ Do you now see an indication that `my-own-test-env` is active?
 
 The new environment will be located inside a folder in a default location (It is possible to override the default location). To look up the location, you can use
 ```
 conda info
 ```
-Look under `active env location`. Python should already be in there -- verify this with e.g. `where python`. Do you have the expected version of Python?
+
+❓ Look under `active env location`. Python should already be in there -- verify this with e.g. `where python`. Do you have the expected version of Python?
 
 ### 3. Install a package
 If you haven't already, activate the environment first.
@@ -322,11 +324,11 @@ conda install pandas
 ```
 
 ### 4. Use Pip within a Conda environment
-Do we have Pip inside the environment?
+❓ Do we have Pip inside the environment?
 ```
 where pip
 ```
-Is the `pip` executable inside the Conda environment folder? If not, install it:
+❓ Is the `pip` executable inside the Conda environment folder? If not, install it:
 ```
 conda install pip
 ```
@@ -334,7 +336,7 @@ Install a package with pip:
 ```
 pip install scikit-learn
 ````
-Both Pandas and Scikit-learn depend on Numpy. Did Pip reinstall Numpy, or did it find that Numpy was already installed when we installed Pandas?
+❓ Both Pandas and Scikit-learn depend on Numpy. Did Pip reinstall Numpy, or did it find that Numpy was already installed when we installed Pandas?
 
 Note that Scikit-learn is also available from Conda, but we want to try out Pip here.
 
@@ -660,9 +662,11 @@ Can think of it as an Rstudio project (becomes your base working directory)
     ```
     python demo-script.py
     ```
-    - This time python runs the code in the virtual environment and you will get an error if you don't have `numpy` and `matplotlib` installed in that environment. 
 
-5. **Select python interpreter/environment for an interactive run in VS Code**
+   ❓ This time python runs the code in the virtual environment, do you see any error? Are `numpy` and `matplotlib` installed in that environment.
+   
+
+6. **Select python interpreter/environment for an interactive run in VS Code**
 
     - Click on:
     `
@@ -672,7 +676,7 @@ Can think of it as an Rstudio project (becomes your base working directory)
     `
     Ctrl + shift + P "> "Python: Select Interpreter" -> {choose desired environment/interpreter}
     `
-6. **Run python script interactively**
+7. **Run python script interactively**
     - Try running the code interactively using various alternatives 
 
 
@@ -830,7 +834,7 @@ Can set a "breakpoint" where you want the code to stop, to inspect objects (call
 
 #### Using your own virtual environments for Jupyter in VS Code
 1. Open an empty source folder in VS Code.
-2. Download the notebook by right clicking <a href="https://github.com/ArashAh/python_workshop/blob/main/scripts/Python_script_jupyter.ipynb" download>this link</a> and then **Save link as...**
+2. Download the notebook by right clicking <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/blob/main/scripts/Python_script_jupyter.ipynb" download>this link</a> and then **Save link as...**
 3. Copy the downloaded notebook to the source folder and open it in VS Code.
 4. **Setup a virtual environment** for the notebook. 
      - Click on "Select Kernel" at the top right.
