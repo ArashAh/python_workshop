@@ -631,10 +631,12 @@ You also need the jupyter extension (see above)
 
     - There are lots of formatters in python, that are available in VS Code. We will be using `black` in this workshop.
 
-      `Right click (anywhere in open file) -> Format Document with -> Black Formatter`
-
-    - We will see how this changes the format of the content in <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/fizz_buzz.py" download>this link</a> 
-
+    - We will see how this changes the format of the content in in `fizz_buzz.py`.
+    
+    - Download the `fizz_buzz.py` script by right clicking <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/fizz_buzz.py" download>this link</a> and then **Save link as**
+    
+    -  `Right click (anywhere in open file) -> Format Document with -> Black Formatter`
+ 
     - If you want to the formatter to be "activated" when saving a file at the workspace level, 
       Select:
 
