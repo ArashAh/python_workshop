@@ -834,7 +834,7 @@ Can set a "breakpoint" where you want the code to stop, to inspect objects (call
 
 #### Using your own virtual environments for Jupyter in VS Code
 1. Open an empty source folder in VS Code.
-2. Download the notebook by right clicking <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/blob/main/scripts/Python_script_jupyter.ipynb" download>this link</a> and then **Save link as...**
+2. Download the notebook by right clicking <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/Python_script_jupyter.ipynb" download>this link</a> and then **Save link as...**
 3. Copy the downloaded notebook to the source folder and open it in VS Code.
 4. **Setup a virtual environment** for the notebook. 
      - Click on "Select Kernel" at the top right.
