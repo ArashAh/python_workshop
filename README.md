@@ -2,11 +2,12 @@
 
 This page contains the complementary material for the "Getting up to speed with Python" workshop. The material is designed to be used in the hands-on part of the workshop and is not supposed to be used as an stand-alone source of instructions. 
 
+## Table of content <a name="top"></a>
+
 - [Package and environment management with pip and venv](#environment)
 - [Package and environment management with conda](#conda)
 - [Package and environment management with poetry](#poetry)
-- [VS Code](#vscode)
-- [JupyterLab](#jupyterlab)
+- [Prototyping tools - VS Code](#vscode)
 - [Production tools - HPC servers](#hpc)
 
 ----
@@ -277,7 +278,7 @@ rm -rf new_venv
   **Example:** `python3 -m venv myvenv --system-site-packages`
 
 ---
-
+[Back to table of content](#top) 
 ## Package and environment management with conda <a name="conda"></a>
 
 ### 1. Get started
@@ -369,6 +370,8 @@ conda env create --name test-my-yml --file environment.yml
 ```
 
 Activate the new environment, and verify that packages were installed.
+
+[Back to table of content](#top) 
 
 ## Package and environment management with poetry <a name="poetry"></a>
 
@@ -569,9 +572,9 @@ poetry env remove {environment name}
 
 ### 6. Additional
 
-1. **Poetry just for package managment**
+1. **Poetry just for package management**
 
-It is possible to just use poetry for package management, but set up the virtual environmet with something else (e.g. conda), or not use a virtual environment at all.
+It is possible to just use poetry for package management, but set up the virtual environment with something else (e.g. conda), or not use a virtual environment at all.
 In this case, you would run:
 
 ```bash
@@ -592,8 +595,9 @@ poetry env info -p {in directory containing poetry configs}
 
 Paste path from above into the “Enter interpreter path”
 
+[Back to table of content](#top)  
 
-## VS Code <a name="vscode"></a>
+## Prototyping tools - VS Code <a name="vscode"></a>
 
 ### Install extensions
 
@@ -642,33 +646,23 @@ In general,root "folder" (i.e. the one you are in with "Open folder") is your "w
 Can think of it as an Rstudio project (becomes your base working directory)
 
 2. **Python files**
-    - Create a new python file  
-    - Add the following code to the file 
-    
-    ```Python
-    import numpy as np
-    import matplotlib.pyplot as plt
-    random_numbers = np.random.rand(100)
-    mean_value = np.mean(random_numbers)
-    print("Random numbers:", random_numbers)
-    print("Mean value:", mean_value)
+    - Click on this <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/frsit_run.ipynb" download> link</a> and copy the content
+    - Create a new python file and paste the copied content to it 
+    - Save the file with this name: `demo-script.py`
 
-    # Create a plot
-    plt.figure(figsize=(10, 6))
-    plt.plot(random_numbers, marker='o', linestyle='-', color='b', label='Random Numbers')
-    plt.axhline(y=mean_value, color='r', linestyle='--', label=f'Mean Value: {mean_value:.2f}')
-    plt.title('Plot of 100 Random Numbers')
-    plt.xlabel('Index')
-    plt.ylabel('Value')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+3. **Run python script using the global environment** 
+    - Open a new terminal, navigate to the directory where you saved the file and run 
+    ```
+    python demo-script.py
+    ```
+4. **Run python script using the virtual environment**
+    - Activate the virtual environment you made previously and then run 
+    ```
+    python demo-script.py
+    ```
+    - This time python runs the code in the virtual environment and you will get an error if you don't have `numpy` and `matplotlib` installed in that environment. 
 
-   ```
-   - Save the file with this name: `demo-script.py`
-
-
-3. **Select python interpreter/environment**
+5. **Select python interpreter/environment for an interactive run in VS Code**
 
     - Click on:
     `
@@ -678,13 +672,8 @@ Can think of it as an Rstudio project (becomes your base working directory)
     `
     Ctrl + shift + P "> "Python: Select Interpreter" -> {choose desired environment/interpreter}
     `
-
-4. **Run python script** 
-    - Open a new terminal and run 
-    ```
-    python demo-script.py
-    ```
-    - Do we have any alternative to run python code interactively? 
+6. **Run python script interactively**
+    - Try running the code interactively using various alternatives 
 
 
 #### Formatting, linting and debugging 
@@ -693,10 +682,12 @@ Can think of it as an Rstudio project (becomes your base working directory)
 
     - There are lots of formatters in python, that are available in VS Code. We will be using `black` in this workshop.
 
-      `Right click (anywhere in open file) -> Format Document with -> Black Formatter`
-
-    - We will see how this changes `scripts/fizz_buzz.py`
-
+    - We will see how this changes the format of the content in in `fizz_buzz.py`.
+    
+    - Download the `fizz_buzz.py` script by right clicking <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/fizz_buzz.py" download>this link</a> and then **Save link as**
+    
+    -  `Right click (anywhere in open file) -> Format Document with -> Black Formatter`
+ 
     - If you want to the formatter to be "activated" when saving a file at the workspace level, 
       Select:
 
@@ -723,6 +714,8 @@ Can think of it as an Rstudio project (becomes your base working directory)
     - Note: Unlike a formatter, in VS Code, this is by default activated  for *all* python files. Need to manually turn it off if not desired.
 
 3. **Debugging in VS Code**
+   
+Download the example code for debugging by right clicking <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/code_debug.py" download>this link</a> and then **Save link as...**
 
 The basic options are:
 
@@ -739,7 +732,6 @@ Run the debugger on a python file (e.g. `scripts/code_debug.py`) and it will con
 
 Can set a "breakpoint" where you want the code to stop, to inspect objects (called "variables" in the debugger: "locals" and "globals").
 
-We will go over examples of the options above with the `scripts/code_debug.py`
 
 #### Version (source) control in VS Code
 1. **Initiate a Git repo**
@@ -763,7 +755,7 @@ We will go over examples of the options above with the `scripts/code_debug.py`
     - Press `Ctrl + shift + p` -> type `Git:Clone` -> select `Clone from GitHub`-> paste `the HTTPS of the repo`
 
 5. **Git Graph** 
-    - Use Git Graph to keep track of the project's histoy 
+    - Use Git Graph to keep track of the project's history 
 
 
 
@@ -823,7 +815,7 @@ We will go over examples of the options above with the `scripts/code_debug.py`
     jupyter nbconvert --to html --execute <name of jupyter file>.ipynb
     ```
 
-    - or simply Click on the `...` on top of the notebook and select `Export as html`
+    - or simply Click on the `...` on top of the notebook and select `Export` -> `HTML`
 
     ❓ What does this newly created file look like when you open it in VS Code?
 
@@ -851,6 +843,7 @@ We will go over examples of the options above with the `scripts/code_debug.py`
      - You will see a `ModuleNotFoundError`, open the VS Code terminal and run `pip install matplotlib`
      - Click "Run All" again to execute all cells.
 
+[Back to table of content](#top) 
 
 ## Production tools - HPC servers <a name="hpc"></a>
 We will demonstrate a simple python job submitted with Slurm on the Fox HPC cluster. If you have access to Fox and want to follow along, you can download the scripts needed: 
