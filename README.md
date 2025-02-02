@@ -844,7 +844,7 @@ Can set a "breakpoint" where you want the code to stop, to inspect objects (call
 5. **Run the notebook**
      - Click "Run All"
      - If prompted, install the `ipykernel` package.
-     - You will see a `ModuleNotFoundError`, open the VS Code terminal and run `pip install matplotlib`
+     - You will see a `ModuleNotFoundError`. Install missing packages using the VS Code terminal.
      - Click "Run All" again to execute all cells.
 
 [Back to table of content](#top) 
