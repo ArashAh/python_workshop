@@ -426,6 +426,7 @@ package-mode = false
 
 3. **Activate the virtual environment (and run python script):**
 
+Download the `pd_data.py` script by right clicking <a href="https://raw.githubusercontent.com/ArashAh/python_workshop/main/scripts/pd_data.py" download>this link</a> and then **Save link as**
 
 ```bash
 poetry shell
@@ -436,13 +437,13 @@ poetry shell
 From here, you can run a python script:
 
 ```bash
-python path/to/python_workshop/scripts/pd_data.py
+python path/to/pd_data.py
 ```
 
 Alternatively, you can do the above to in one step:
 
 ```bash
-poetry run python path/to/python_workshop/scripts/pd_data.py
+poetry run python path/to/pd_data.py
 ```
 
 *Note: the above two lines will not work, because we are missing the packages*
@@ -712,6 +713,8 @@ Can think of it as an Rstudio project (becomes your base working directory)
 2. **Linting python in VS Code**
 
     - Checks code for semantic and stylistic problems.
+    
+    - Can check any script, for instance, `demo-script.py` from earlier
 
     - To open tab with list of “problems” press: `Ctrl + shift + M`: 
 
@@ -794,7 +797,9 @@ Can set a "breakpoint" where you want the code to stop, to inspect objects (call
 
     ❓ What happens when you try to run the above (markdown) cell?
 
-3. **Some useful shortcuts:**
+   - Save the above code to `jupyter_to_python.py`
+   
+4. **Some useful shortcuts:**
 
     * `ctrl + enter` = run current cell
     * `shift + enter` = run current cell and jump to next cell
@@ -807,7 +812,7 @@ Can set a "breakpoint" where you want the code to stop, to inspect objects (call
     * `[ctrl + shift + ,] U` = move selected cell(s) up
     * `[ctrl + shift + ,] D` = move selected cell(s) down
 
-4. **Convert python to jupyter file (minor)**
+5. **Convert python to jupyter file (minor)**
 
     - In a python file that has "cells":
 
@@ -823,7 +828,7 @@ Can set a "breakpoint" where you want the code to stop, to inspect objects (call
 
     ❓ What does this newly created file look like when you open it in VS Code?
 
-5. **Variable view**
+6. **Variable view**
 
     - To replicate the "global environment" window in RStudio, you can use the "Data Wrangler" extension.
 
