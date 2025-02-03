@@ -1,4 +1,6 @@
 #!/bin/bash
+#Example SLURM script for Fox
+
 #SBATCH --job-name=pandas_plots
 #SBATCH --account=ec12
 #SBATCH --time=00:30:00
@@ -9,7 +11,7 @@
 
 # Load necessary modules
 module purge
-module load SciPy-bundle/2024.05-gfbf-2024a
+module load SciPy-bundle/2023.07-gfbf-2023a
 module load matplotlib/3.7.2-gfbf-2023a
 # Activate virtual environment if needed
 # source /path/to/your/venv/bin/activate
