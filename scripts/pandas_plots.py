@@ -17,7 +17,6 @@ plt.xlabel('Date')
 plt.ylabel('Value')
 plt.legend()
 plt.savefig('line_plot.png')
-#plt.show()
 
 # Create a scatter plot
 plt.figure(figsize=(8, 6))
@@ -26,7 +25,6 @@ plt.title('Temperature vs Humidity')
 plt.xlabel('Temperature')
 plt.ylabel('Humidity')
 plt.savefig('scatter_plot.png')
-#plt.show()
 
 # Create a histogram
 plt.figure(figsize=(8, 6))
@@ -35,4 +33,3 @@ plt.title('Temperature Distribution')
 plt.xlabel('Temperature')
 plt.ylabel('Frequency')
 plt.savefig('histogram.png')
-#plt.show()
